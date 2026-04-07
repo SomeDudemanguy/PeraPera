@@ -1,0 +1,3 @@
+@echo off
+echo Starting Image Browser with WebP support...
+java -cp "bin;imageio-webp-3.13.1.jar;imageio-core-3.13.1.jar;imageio-metadata-3.13.1.jar;common-lang-3.13.1.jar;common-io-3.13.1.jar" viewer.ImageBrowserApp
