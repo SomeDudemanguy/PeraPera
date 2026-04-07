@@ -165,6 +165,11 @@ public class BackgroundService {
         cachedBrowserWidth = -1;
         cachedBrowserHeight = -1;
         ApplicationService.setBrowserBackgroundImagePath("");
+        
+        // Trigger immediate background refresh
+        if (browserBackgroundRefreshCallback != null) {
+            browserBackgroundRefreshCallback.run();
+        }
     }
     
     /**
@@ -185,6 +190,11 @@ public class BackgroundService {
         viewerBackgroundImagePath = null;
         cachedViewerBackgroundImage = null;
         ApplicationService.setViewerBackgroundImagePath("");
+        
+        // Trigger immediate background refresh
+        if (browserBackgroundRefreshCallback != null) {
+            browserBackgroundRefreshCallback.run();
+        }
     }
     
     /**
