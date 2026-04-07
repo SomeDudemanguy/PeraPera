@@ -789,8 +789,8 @@ public class LibraryService {
             String folderPath = entry.getKey().replace("\\", "/");
             List<String> diskComicIds = entry.getValue();
             
-            // Only create collection if 2+ comics
-            if (diskComicIds.size() < 2) continue;
+            // Only create collection if 1+ comics
+            if (diskComicIds.size() < 1) continue;
             
             // Get folder name as collection name
             File folder = new File(folderPath);
