@@ -266,7 +266,7 @@ public class LibraryService {
             System.out.println(">>> LIBRARY LOAD COMPLETE:");
             System.out.println("    Lines read: " + lineCount);
             System.out.println("    Entries parsed: " + entriesParsed);
-            System.out.println("    Successfully loaded: " + libraryCache.size() + " comics into memory.");
+            System.out.println("    Successfully loaded: " + libraryCache.size() + " Titles into memory.");
         } catch (IOException e) {
             System.err.println(">>> CRITICAL: Failed to load library: " + e.getMessage());
             e.printStackTrace();

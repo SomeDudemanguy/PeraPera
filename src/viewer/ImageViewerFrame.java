@@ -1286,7 +1286,7 @@ public class ImageViewerFrame extends JFrame {
                     entry.name.toLowerCase().contains(searchLower) ||
                     String.join(", ", entry.tags).toLowerCase().contains(searchLower)) {
                     
-                    String display = entry.name + " (" + entry.comicIds.size() + " comics)";
+                    String display = entry.name + " (" + entry.comicIds.size() + " Titles)";
                     if (entry.rating > 0) {
                         display += " " + entry.rating + "/100";
                     }
@@ -1303,7 +1303,7 @@ public class ImageViewerFrame extends JFrame {
                     collection.name.toLowerCase().contains(searchLower) ||
                     String.join(", ", collection.tags).toLowerCase().contains(searchLower)) {
                     
-                    String display = collection.name + " (" + collection.comicNames.size() + " comics)";
+                    String display = collection.name + " (" + collection.comicNames.size() + " Titles)";
                     if (collection.rating > 0) {
                         display += " " + collection.rating + "/100";
                     }

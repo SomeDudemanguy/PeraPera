@@ -285,7 +285,7 @@ public class CollectionService {
             
             if (orderedFolders.isEmpty()) {
                 JOptionPane.showMessageDialog(app,
-                    "No comics from this collection were found in your library.",
+                    "No Titles from this collection were found in your library.",
                     "Collection Empty", JOptionPane.WARNING_MESSAGE);
                 return;
             }
@@ -333,7 +333,7 @@ public class CollectionService {
         }
         
         if (collection.comicNames.isEmpty()) {
-            JLabel emptyLabel = new JLabel("No comics in collection", SwingConstants.CENTER);
+            JLabel emptyLabel = new JLabel("No Titles in collection", SwingConstants.CENTER);
             emptyLabel.setForeground(ApplicationService.getTextSecondary());
             emptyLabel.setFont(new Font("Arial", Font.ITALIC, 12));
             comicListPanel.add(emptyLabel);
@@ -546,8 +546,8 @@ public class CollectionService {
                         app.openCollectionViewer(clickedFolder, orderedFolders, collection.name);
                     } else {
                         JOptionPane.showMessageDialog(dialog, 
-                            "Comic '" + comicName + "' not found in library.\n\nThe comic may have been renamed or moved.", 
-                            "Comic Not Found", JOptionPane.WARNING_MESSAGE);
+                            "Title '" + comicName + "' not found in library.\n\nThe Title may have been renamed or moved.", 
+                            "Title Not Found", JOptionPane.WARNING_MESSAGE);
                     }
                 }
             }

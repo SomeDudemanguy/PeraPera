@@ -1262,7 +1262,7 @@ public class ThumbnailService {
             }
             if (!collection.comicIds.isEmpty()) {
                 if (!infoText.isEmpty()) infoText += " • ";
-                infoText += collection.getComicCount() + " comics";
+                infoText += collection.getComicCount() + " Titles";
             }
             JLabel infoLabel = new JLabel(infoText, SwingConstants.CENTER);
             infoLabel.setForeground(ApplicationService.getAccentColor());

@@ -22,6 +22,7 @@ public class BackgroundService {
     private static int cachedBrowserHeight = -1;
     private static final Color FALLBACK_COLOR = ApplicationService.getBackgroundDark();
     private static final File BACKGROUNDS_DIR = new File("userData/backgrounds");
+    private static Runnable browserBackgroundRefreshCallback = null;
     
     static {
         // Ensure backgrounds directory exists
@@ -109,6 +110,11 @@ public class BackgroundService {
             ApplicationService.setBrowserBackgroundImagePath(browserBackgroundImagePath);
             
             loadBrowserBackgroundImage(targetFile);
+            
+            // Trigger immediate background refresh
+            if (browserBackgroundRefreshCallback != null) {
+                browserBackgroundRefreshCallback.run();
+            }
             
         } catch (IOException e) {
             System.err.println("Failed to copy browser background image: " + e.getMessage());
@@ -358,6 +364,13 @@ public class BackgroundService {
         if (result == JFileChooser.APPROVE_OPTION) {
             setBrowserBackground(fileChooser.getSelectedFile());
         }
+    }
+    
+    /**
+     * Sets the callback for immediate background refresh when background changes.
+     */
+    public static void setBrowserBackgroundRefreshCallback(Runnable callback) {
+        browserBackgroundRefreshCallback = callback;
     }
     
     /**

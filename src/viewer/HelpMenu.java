@@ -123,7 +123,7 @@ etc
 
     Library Browser: Use Arrow Keys to navigate, Enter to select. In the Collection menu, Left/Right arrows will highlight the "Continue Reading" button. 
 
-    Comic/Manga Mode: Left/Right to turn pages(click on page or use arrowKeys). Page Up/Down to control zoom. Hold Right Shift to "Keep Zoom" (for works that have miniscule text). Press Enter/right click to open the control bar in comic view.
+    Comic/Manga Mode: Left/Right to turn pages(click on page or use arrowKeys). Page Up/Down to control zoom. Hold Right Shift to "Keep Zoom" (for works that have miniscule text). Press Enter/right click to open the control bar in Title view.
 
     Webtoon Mode: Use Up/Down arrows for smooth scrolling, pageUp and pageDown for zoom.
 

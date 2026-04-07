@@ -186,28 +186,27 @@ public class ImageBrowserApp extends JFrame implements LibraryProvider {
 
 
         // Wrap scroll pane in a background-rendering panel
-
         JPanel backgroundPanel = new JPanel(new BorderLayout()) {
-
             @Override
-
             protected void paintComponent(Graphics g) {
-
                 super.paintComponent(g);
-
                 BackgroundService.renderBrowserBackground(g, getWidth(), getHeight(), this);
-
             }
-
         };
-
         backgroundPanel.setOpaque(false);
-
         backgroundPanel.add(scrollPane, BorderLayout.CENTER);
-
         getContentPane().remove(scrollPane);
-
         getContentPane().add(backgroundPanel, BorderLayout.CENTER);
+        
+        // Store reference for background refresh
+        final JPanel[] backgroundPanelRef = {backgroundPanel};
+        
+        // Register callback for immediate background refresh
+        BackgroundService.setBrowserBackgroundRefreshCallback(() -> {
+            if (backgroundPanelRef[0] != null) {
+                backgroundPanelRef[0].repaint();
+            }
+        });
 
 
 
@@ -401,8 +400,8 @@ public class ImageBrowserApp extends JFrame implements LibraryProvider {
                 try {
                     int size = get();
                     if (size > 0) {
-                        System.out.println("Library Synced: " + size + " comics loaded");
-                        setTitle("PeraPera - Library Loaded: " + size + " comics");
+                        System.out.println("Library Synced: " + size + " Titles loaded");
+                        setTitle("PeraPera - Library Loaded: " + size + " Titles");
                         // Initialize thumbnail progress tracking
                         ThumbnailService.initializeProgress(size);
                         // Start progress bar for thumbnail loading phase
@@ -910,7 +909,7 @@ public class ImageBrowserApp extends JFrame implements LibraryProvider {
 
             JOptionPane.showMessageDialog(this,
 
-                "No comics or collections match the current filters.",
+                "No Titles or collections match the current filters.",
 
                 "No Results",
 
@@ -1059,7 +1058,7 @@ public class ImageBrowserApp extends JFrame implements LibraryProvider {
     
     /**
      * Shows the welcome screen when no library is configured.
-     * Displays a "No Comics Found" message with a button to select library folder.
+     * Displays a "No Titles Found" message with a button to select library folder.
      */
     public void showWelcomeScreen() {
         // Hide the scroll pane (thumbnail grid)
@@ -1084,7 +1083,7 @@ public class ImageBrowserApp extends JFrame implements LibraryProvider {
             welcomePanel.add(titleLabel, gbc);
             
             // Subtitle
-            JLabel subtitleLabel = new JLabel("<html><center>No Comics Found</center></html>");
+            JLabel subtitleLabel = new JLabel("<html><center>No Titles Found</center></html>");
             subtitleLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             subtitleLabel.setForeground(ApplicationService.getTextSecondary());
             subtitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -1174,8 +1173,8 @@ public class ImageBrowserApp extends JFrame implements LibraryProvider {
                 // Sync library with new directory
                 try {
                     libraryService.syncLibrary(selectedDir);
-                    System.out.println("Library synced: " + libraryService.getLibrarySize() + " comics loaded");
-                    setTitle("PeraPera - Library Loaded: " + libraryService.getLibrarySize() + " comics");
+                    System.out.println("Library synced: " + libraryService.getLibrarySize() + " Titles loaded");
+                    setTitle("PeraPera - Library Loaded: " + libraryService.getLibrarySize() + " Titles");
                 } catch (Exception e) {
                     System.err.println("Failed to sync library: " + e.getMessage());
                 }

@@ -1139,7 +1139,7 @@ public class ImageScrollerFrame extends JFrame {
 
             String prevComicName = collectionFolders.get(currentFolderIndex - 1).getName();
 
-            prevComicStripButton = createStripNavigationButton("↑ Previous Comic: " + prevComicName);
+            prevComicStripButton = createStripNavigationButton("↑ Previous Title: " + prevComicName);
 
             prevComicStripButton.addActionListener(e -> navigateToComicByIndex(currentFolderIndex - 1));
 
@@ -1183,7 +1183,7 @@ public class ImageScrollerFrame extends JFrame {
 
             String nextComicName = collectionFolders.get(currentFolderIndex + 1).getName();
 
-            nextComicStripButton = createStripNavigationButton("↓ Next Comic: " + nextComicName);
+            nextComicStripButton = createStripNavigationButton("↓ Next Title: " + nextComicName);
 
             nextComicStripButton.addActionListener(e -> navigateToComicByIndex(currentFolderIndex + 1));
 

@@ -10,7 +10,7 @@ public class HeaderPanel extends JPanel {
     private final JTextField searchField = new JTextField(20);
     private final JButton searchButton = new JButton("Search");
     private final JButton clearButton = new JButton("Clear");
-    private final JButton randomComicButton = new JButton("🎲 Random Comic");
+    private final JButton randomComicButton = new JButton("Random Title");
     private final JButton prevPageButton = new JButton("← Prev");
     private final JButton nextPageButton = new JButton("Next →");
     private final JLabel pageLabel = new JLabel("Page 1 of 1");

@@ -482,7 +482,7 @@ public class DialogService {
                 "• Rescan your library directory for new/removed folders<br>" +
                 "• Clear the thumbnail cache (thumbnails will be regenerated)<br>" +
                 "• Sync metadata with the file system<br><br>" +
-                "Note: This may take a while if you have many comics.<br>" +
+                "Note: This may take a while if you have many Titles.<br>" +
                 "(This was a debug feature)<br>" +
                 "(Most of this can now be done by just restarting the program)<br>" +
                 "(and not having to wait for the thumbnails to load)<br><br>"+
@@ -879,7 +879,7 @@ public class DialogService {
                 // Filter: show all if filter is empty, or only matching tags
                 if (filter.isEmpty() || tag.toLowerCase().contains(filter)) {
                     int count = app.getFolderTagCount(tag);
-                    String label = tag + (count > 0 ? " (" + count + " comics)" : "");
+                    String label = tag + (count > 0 ? " (" + count + " Titles)" : "");
                     
                     JCheckBox checkBox = new JCheckBox(label);
                     checkBox.setBackground(ApplicationService.getBackgroundDark());
@@ -1136,7 +1136,7 @@ public class DialogService {
         thumbnailPanel.add(thumbnailLabel, BorderLayout.NORTH);
         
         DefaultComboBoxModel<String> thumbnailModel = new DefaultComboBoxModel<>();
-        thumbnailModel.addElement("(Use first comic)");
+        thumbnailModel.addElement("(Use first Title)");
         for (String comicName : collection.comicNames) {
             thumbnailModel.addElement(comicName);
         }
@@ -1537,7 +1537,7 @@ public class DialogService {
             
             // Update thumbnail selection - convert name to ID
             String selected = (String) thumbnailCombo.getSelectedItem();
-            if (selected != null && !selected.equals("(Use first comic)")) {
+            if (selected != null && !selected.equals("(Use first Title)")) {
                 String selectedId;
                 // Use path-based lookup if collection has a folderPath (auto-generated collections)
                 if (collection.folderPath != null && !collection.folderPath.isEmpty()) {
@@ -1660,7 +1660,7 @@ public class DialogService {
                 // Filter: show all if filter is empty, or only matching tags
                 if (filter.isEmpty() || tag.toLowerCase().contains(filter)) {
                     int count = app.getFolderTagCount(tag);
-                    String label = tag + (count > 0 ? " (" + count + " comics)" : "");
+                    String label = tag + (count > 0 ? " (" + count + " Titles)" : "");
                     
                     JCheckBox checkBox = new JCheckBox(label);
                     checkBox.setBackground(ApplicationService.getBackgroundDark());
@@ -2244,7 +2244,7 @@ public class DialogService {
                 collection.name.toLowerCase().contains(searchLower) ||
                 String.join(", ", collection.tags).toLowerCase().contains(searchLower)) {
                 
-                String display = collection.name + " (" + collection.comicNames.size() + " comics)";
+                String display = collection.name + " (" + collection.comicNames.size() + " Titles)";
                 if (collection.rating > 0) {
                     display += " " + collection.rating + "/100";
                 }
