@@ -34,6 +34,9 @@ Example:
 <img width="1919" height="1029" alt="pilt" src="https://github.com/user-attachments/assets/f69dc03e-5ff3-45a0-a3dc-49cbe76c27b7" />
 
 ## Usage
+
+PeraPera only works on Windows
+
 This requires a specific folder structure to work:
 
 <img width="426" height="234" alt="pilt" src="https://github.com/user-attachments/assets/f15ddefe-9724-4a3c-97b7-62b2a976bceb" />
@@ -52,6 +55,11 @@ Go to releases
 
 <img width="1911" height="841" alt="peraperating" src="https://github.com/user-attachments/assets/96f71b53-82dd-4163-94f7-c1681e3dc1d7" />
 
+Download the PeraPera zip
+
+<img width="1172" height="476" alt="pilt" src="https://github.com/user-attachments/assets/19d39905-40d3-4158-b344-640a6e911bb9" />
+
+Unzip it and run with run.bat
 
 
 
