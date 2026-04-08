@@ -80,7 +80,8 @@ Done, look at the "Help" menu if you need more details.
 You can generate your own tags and add them to titles/collections
 
 <img width="462" height="230" alt="pilt" src="https://github.com/user-attachments/assets/b54c7d25-4696-4e04-9903-4832977c4fe9" />
-<img width="1039" height="638" alt="pilt" src="https://github.com/user-attachments/assets/20fa04a5-cb2e-4c3a-b5c5-c00c160d0e0e" />
+<img width="1046" height="650" alt="pilt" src="https://github.com/user-attachments/assets/558b9510-4d62-4106-9446-f2f2408959af" />
+
 
 You can then use the tag search for boolean logic with the tags, for instance here i added the tag "AbsolutePeak" to another manga and searched for tags absolutepeak ~ abysmaldogshit (~ is the logical OR operator here) and these 2 showed up
 
