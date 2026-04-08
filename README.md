@@ -46,6 +46,17 @@ The program only scans two levels deep from your main directory.
 
 Anything buried deeper than two folders away from the root will be ignored and might break something(not good).
 
+### Step 0:
+How to download
+Go to releases
+
+<img width="1911" height="841" alt="peraperating" src="https://github.com/user-attachments/assets/96f71b53-82dd-4163-94f7-c1681e3dc1d7" />
+
+
+
+
+
+
 ### Step 1:
 Choose your directory
 
