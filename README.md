@@ -1,14 +1,18 @@
 # PeraPera
 ![LogoWtText2](https://github.com/user-attachments/assets/2628d686-0621-4797-b57d-4017c5c84b4b)
+
+[![Introduction video](https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg)](https://www.youtube.com/embed/_b_BgyaIUT8)
+
+<img width="350" height="175" alt="tumnweil" src="https://github.com/user-attachments/assets/5f94f54c-0879-4a05-a1ff-1bbb394f2272" />
+
+
 ## Overview
 
 PeraPera is a library manager and viewer for comics, manga, and webtoons (or any image sets organized into folders). It indexes your existing local directory structure into a searchable gallery without requiring you to move or rename your files. Once indexed, you can assign custom tags, track read progress, and apply ratings to titles within the gallery to filter and sort your collection.
 
 
 
-[![Introduction video](https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg)](https://www.youtube.com/embed/_b_BgyaIUT8)
 
-<img width="350" height="175" alt="tumnweil" src="https://github.com/user-attachments/assets/5f94f54c-0879-4a05-a1ff-1bbb394f2272" />
 
 
 
