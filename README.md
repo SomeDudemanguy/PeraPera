@@ -6,6 +6,12 @@ PeraPera is a library manager and viewer for comics, manga, and webtoons (or any
 
 
 
+[![Introduction video](https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg)](https://www.youtube.com/embed/_b_BgyaIUT8)
+
+<img width="350" height="175" alt="tumnweil" src="https://github.com/user-attachments/assets/5f94f54c-0879-4a05-a1ff-1bbb394f2272" />
+
+
+
 
 Before:
 
